@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/buttonConnect"
+        android:layout_width="wrap_content"
+        android:layout_height="47dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Connect"
+        android:textAllCaps="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editServerAddr" />
+
+    <TextView
+        android:id="@+id/textServerAddr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:text="Server Address"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editServerAddr"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:autoText="false"
+        android:ems="10"
+        android:inputType="text"
+        android:text="ws://202.118.31.198:18832/ws"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textServerAddr" />
+
+    <Button
+        android:id="@+id/buttonDisconnect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Disconnect"
+        android:textAllCaps="false"
+        app:layout_constraintStart_toEndOf="@+id/buttonConnect"
+        app:layout_constraintTop_toBottomOf="@+id/editServerAddr" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:fillViewport="true"
+        android:scrollbarStyle="insideInset"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonDisconnect"
+        tools:layout_editor_absoluteX="155dp">
+
+        <EditText
+            android:id="@+id/editLog"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:allowUndo="false"
+            android:autoText="false"
+            android:editable="false"
+            android:ems="10"
+            android:gravity="start|top"
+            android:hint="SMSSender Log Output..."
+            android:inputType="textMultiLine|text"
+            android:scrollbars="vertical" />
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
